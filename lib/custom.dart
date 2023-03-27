@@ -5,11 +5,14 @@ class InputField extends StatelessWidget {
   final String hint;
   final Icon icon;
   final FontWeight fontWeight;
+  final double width;
+  final bool isIcon;
 
   const InputField({
     super.key,
     required this.hint,
-    required this.icon,
+    this.icon=const Icon(Icons.person),
+    this.width = 300,this.isIcon = true,
     this.fontWeight = FontWeight.w500,
   });
 
@@ -20,11 +23,12 @@ class InputField extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(20)),
         color: Colors.white,
       ),
+      width: width,
       child: TextField(
         decoration: InputDecoration(
           labelStyle: TextStyle(color: Colors.black, fontWeight: fontWeight),
           labelText: hint,
-          prefixIcon: icon,
+          prefixIcon:isIcon ? icon: null,
           prefixIconColor: Colors.black,
           border: InputBorder.none,
           contentPadding: const EdgeInsets.all(7),
@@ -148,6 +152,26 @@ class MyIconButton extends StatelessWidget {
         // ),
         child: icon,
         onPressed: () => onPressed,
+      ),
+    );
+  }
+}
+class CustomText1 extends StatelessWidget {
+  final String text;
+  final Color color;
+  final bool  uppercase;
+  const CustomText1({super.key,this.color=Colors.white,this.uppercase=false,this.text = "Login With Google"});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Text(uppercase? text.toUpperCase():text ,
+
+      style: TextStyle(
+        color:color,
+
+
+        fontSize: 20,
+
       ),
     );
   }
