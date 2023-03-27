@@ -46,22 +46,26 @@ class CustomButton extends StatelessWidget {
   final FontWeight fontWeight;
   final Color background;
   final Color foreground;
+  final String path;
 
   const CustomButton({
     super.key,
     required this.child,
     this.fontWeight = FontWeight.w500,
-    this.width = 120,
-    this.height = 50,this.color=const  Color(0xFFFFFFFF),
+    this.width = 160,
+    this.height = 50,this.color=const  Color(0xFF8A2D25),
     this.background = Colors.white,
     this.foreground = Colors.black,
+    this.path = "",
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, path);
+        },
         child: child,
         style: ElevatedButton.styleFrom(
           //minimumSize: Size(width, height),
@@ -144,12 +148,7 @@ class MyIconButton extends StatelessWidget {
         color: color,
       ),
       child: CupertinoButton(
-        // child: const Icon(
-        //   // CupertinoIcons.heart_solid,
-        //
-        //   color: Colors.white,
-        //
-        // ),
+
         child: icon,
         onPressed: () => onPressed,
       ),

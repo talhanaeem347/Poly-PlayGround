@@ -1,4 +1,5 @@
 import 'package:poly_playground/ui/auth/loginsignup/login.dart';
+import 'package:poly_playground/ui/auth/loginsignup/loginwithphone.dart';
 import 'package:poly_playground/ui/splash.dart';
 
 import 'Home.dart';
@@ -26,7 +27,9 @@ class MyApp extends StatelessWidget {
 
       initialRoute: '/',
         routes: {
-        '/login' : (context) =>  LogIn(),
+          '/login' : (context) =>  LogIn(),
+          '/login_with_phone' : (context) =>  const LoginWithPhone(),
+
 
           '/': (context) => Splash(),
           '/profile': (context) => chat2(),
