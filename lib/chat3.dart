@@ -16,7 +16,7 @@ class chat3 extends StatelessWidget {
             color: Colors.red,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/chats');
           },
         ),
       ),

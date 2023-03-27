@@ -6,7 +6,7 @@ import 'Notifications.dart';
 import 'chat2.dart';
 import 'chat3.dart';
 import 'chat4.dart';
-// import 'Settings.dart';
+import 'Settings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return    MaterialApp(
-      initialRoute: '/chats',
+      initialRoute: '/chat2',
         routes: {
-          '/': (context) => chats(),
-          '/profile': (context) => chat2(),
-          '/chat': (context)=> chat3(),
-          '/chat4':(context)=>chat4(),
+          '/chats': (context) => const chats(),
+          '/chat2': (context) => const chat2(),
+          '/chat3': (context)=> const chat3(),
+          '/chat4':(context)=>const chat4(),
           '/settings':(context)=>const Settings(),
           '/Home':(context)=>const Home(),
           '/Notifications':(context)=>const Notifications(),

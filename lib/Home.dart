@@ -33,91 +33,55 @@ class Home extends StatelessWidget {
                 elevation: 0,
                 centerTitle: true,
                 title: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    MyIconButton(
+                      color: Colors.white,
+                      path: "/profile",
+                      // isBorder: true,
+                      icon:  Icon(
+                        CupertinoIcons.person,
+                        color: Colors.black,
+                      ),
 
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: CupertinoButton(
-                        child: const Icon(
-                          CupertinoIcons.person,
-                          color: Colors.black,
-                        ),
-                        onPressed: () {
-                          // Navigate to the profile page
-                        },
-                      ),
                     ),
-                    const SizedBox(width: 10),
-                    Container(
-                      decoration: BoxDecoration(
+                    MyIconButton(
+                      color: Colors.white,
+                      path: "/Home",
+                      // isBorder: true,
+                      icon:  Icon(
+                        CupertinoIcons.home,
+                        color: Colors.black,
+                      ),
 
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: CupertinoButton(
-                        child: const Icon(
-                          CupertinoIcons.home,
-                          color: Colors.black,
-                          size: 26,
-                        ),
-                        onPressed: () {
-                          // Navigate to the home page
-                        },
-                      ),
                     ),
-                    const SizedBox(width: 20),
-
                     MyIconButton(
                       color: Colors.yellow,
                       // isBorder: true,
+                      path: "/chat3",
 
-                      icon: const Icon(
+                      icon:  Icon(
                         CupertinoIcons.video_camera_solid,
                         color: Colors.white,
                       ),
-                      onPressed: () {
-                        // Navigate to the video page
-                      },
-                    ),
-                    const SizedBox(width: 20),
 
+                    ),
                     MyIconButton(
+                      path: "/chats",
                       color: Colors.red,
-                      icon: const Icon(
+                      icon:  Icon(
                         CupertinoIcons.heart_solid,
                         color: Colors.white,
                         size: 24,
                       ),
-                      onPressed: () {
-                        // Navigate to the like page
-                      },
+
                     ),
-                    const SizedBox(width: 20),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //
-                    //     borderRadius: BorderRadius.circular(20),
-                    //   ),
-                    //   child: CupertinoButton(
-                    //     child: const Icon(
-                    //       CupertinoIcons.chat_bubble_2,
-                    //       color: Colors.black,
-                    //       size: 24,
-                    //     ),
-                    //     onPressed: () {
-                    //       // Navigate to the chat/messaging page
-                    //     },
-                    //   ),
-                    // ),
                     MyIconButton(
+                      path: "/chat2",
                       color: Colors.white,
-                      onPressed: () {
-                        // Navigate to the chat/messaging page
-                      },
+
                       borderRadius: 20,
-                      icon: const Icon(
+                      icon:  Icon(
                         CupertinoIcons.chat_bubble_2,
                         color: Colors.black,
                       ),
@@ -126,11 +90,9 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-
           ),
         ),
         body: Column(
-
             children: [
           Container(
           color: Colors.white,
@@ -170,32 +132,14 @@ class Home extends StatelessWidget {
             ],
           ),
         ),
-
-
-          Padding(
+              Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16.0),
-                      child:  Image.asset(
-                        'assets/1.png',
-                        height: 190.0, // Change the height of the image here
-                        width: 159.0,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16.0),
-                      child:  Image.asset(
-                        'assets/2.png',
-                        height: 190.0, // Change the height of the image here
-                        width: 159.0,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                  children: const [
+                     ImageHolder(image: 'assets/1.png',),
+                     ImageHolder(image: 'assets/2.png',),
                   ],
                 ),
               ),
@@ -204,25 +148,9 @@ class Home extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16.0),
-                      child:  Image.asset(
-                        'assets/3.png',
-                        height: 190.0, // Change the height of the image here
-                        width: 159.0,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16.0),
-                      child:  Image.asset(
-                        'assets/4.png',
-                        height: 190.0, // Change the height of the image here
-                        width: 159.0,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                  children: const [
+                     ImageHolder(image: 'assets/3.png',),
+                     ImageHolder(image: 'assets/4.png',),
                   ],
                 ),
               ),
@@ -233,25 +161,9 @@ class Home extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(16.0),
-                          child: Image.asset(
-                            'assets/5.png',
-                            height: 185.0, // Change the height of the image here
-                            width: 159.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(16.0),
-                          child: Image.asset(
-                            'assets/6.png',
-                            height: 185.0, // Change the height of the image here
-                            width: 159.0,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
+                      children: const [
+                        ImageHolder(image: 'assets/5.png',),
+                        ImageHolder(image: 'assets/6.png',),
                       ],
                     ),
 
@@ -263,7 +175,7 @@ class Home extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/chat');// Add your onPressed function here
+                          Navigator.pushNamed(context, '/chat3');// Add your onPressed function here
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.yellow,
@@ -292,7 +204,6 @@ class Home extends StatelessWidget {
                 ],
                 ),
               ),
-
             ]
         ),
       ),
