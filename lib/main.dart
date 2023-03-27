@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           '/chat3': (context)=> const chat3(),
           '/chat4':(context)=>const chat4(),
           '/settings':(context)=>const Settings(),
-          '/Home':(context)=>const Home(),
+          '/home':(context)=>const Home(),
           '/Notifications':(context)=>const Notifications(),
 
         },

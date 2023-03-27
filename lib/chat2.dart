@@ -1,13 +1,10 @@
 import 'package:poly_playground/chats.dart';
 import 'package:flutter/material.dart';
 import 'package:poly_playground/custom.dart';
-
 class chat2 extends StatelessWidget {
   const chat2({Key? key});
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -18,12 +15,7 @@ class chat2 extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) =>  chats()),
-              // );
               Navigator.pushNamed(context, '/chats');
-
             },
           ),
           title: Column(
@@ -34,7 +26,7 @@ class chat2 extends StatelessWidget {
                     padding:  const EdgeInsets.only(left: 0.0),
                     child: IconButton(
                       icon:  const CircleAvatar(
-                        radius: 18,
+                        radius: 20,
                         backgroundImage: AssetImage('assets/oval.png'),
                         backgroundColor: Colors.white,
                       ),
@@ -45,7 +37,7 @@ class chat2 extends StatelessWidget {
                     child: Padding(
                       padding:  EdgeInsets.symmetric(horizontal: 8.0),
                       child: Text(
-                        'Silivia',
+                        'Silvia',
                         style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.black),
                       ),
                     ),
@@ -60,7 +52,6 @@ class chat2 extends StatelessWidget {
               child: Column(
                     children:[
                       const SizedBox(height: 400,),
-
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children:   const [
@@ -71,7 +62,6 @@ class chat2 extends StatelessWidget {
                               fontWeight: FontWeight.w500,color:Color.fromRGBO(60, 60, 67, 100),
                             ),
                           ),
-
                         ],
                       ),// Date Or Time
                       const SizedBox(height: 20,),
@@ -104,7 +94,6 @@ class chat2 extends StatelessWidget {
                             bgColor: Color(0xFFF1F1F1),
                             color: Color(0xFF9E9E9E),
                           ),
-
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 18),
                             child: Container(
