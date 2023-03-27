@@ -1,4 +1,4 @@
-import 'package:calculator/chat2.dart';
+import 'package:poly_playground/chat2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 

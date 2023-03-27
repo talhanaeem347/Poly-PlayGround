@@ -1,4 +1,4 @@
-import 'package:calculator/chats.dart';
+import 'package:poly_playground/chats.dart';
 import 'package:flutter/material.dart';
 
 class chat2 extends StatelessWidget {

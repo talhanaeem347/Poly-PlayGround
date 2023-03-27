@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'custom.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -85,39 +86,60 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 20),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white, width: 2),
-                        borderRadius: BorderRadius.circular(100),
-
-                        color: Colors.red,
+                    // Container(
+                    //   decoration: BoxDecoration(
+                    //     border: Border.all(color: Colors.white, width: 2),
+                    //     borderRadius: BorderRadius.circular(100),
+                    //     color: Colors.red,
+                    //   ),
+                    //   child: CupertinoButton(
+                    //     child: const Icon(
+                    //       CupertinoIcons.heart_solid,
+                    //       color: Colors.white,
+                    //
+                    //     ),
+                    //     onPressed: () {
+                    //       // Navigate to the like page
+                    //     },
+                    //   ),
+                    // ),
+                    MyIconButton(
+                      color: Colors.red,
+                      icon: const Icon(
+                        CupertinoIcons.heart_solid,
+                        color: Colors.white,
+                        size: 24,
                       ),
-                      child: CupertinoButton(
-                        child: const Icon(
-                          CupertinoIcons.heart_solid,
-                          color: Colors.white,
-
-                        ),
-                        onPressed: () {
-                          // Navigate to the like page
-                        },
-                      ),
+                      onPressed: () {
+                        // Navigate to the like page
+                      },
                     ),
                     const SizedBox(width: 20),
-                    Container(
-                      decoration: BoxDecoration(
-
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: CupertinoButton(
-                        child: const Icon(
-                          CupertinoIcons.chat_bubble_2,
-                          color: Colors.black,
-                          size: 24,
-                        ),
-                        onPressed: () {
-                          // Navigate to the chat/messaging page
-                        },
+                    // Container(
+                    //   decoration: BoxDecoration(
+                    //
+                    //     borderRadius: BorderRadius.circular(20),
+                    //   ),
+                    //   child: CupertinoButton(
+                    //     child: const Icon(
+                    //       CupertinoIcons.chat_bubble_2,
+                    //       color: Colors.black,
+                    //       size: 24,
+                    //     ),
+                    //     onPressed: () {
+                    //       // Navigate to the chat/messaging page
+                    //     },
+                    //   ),
+                    // ),
+                    MyIconButton(
+                      color: Colors.white,
+                      onPressed: () {
+                        // Navigate to the chat/messaging page
+                      },
+                      borderRadius: 20,
+                      icon: const Icon(
+                        CupertinoIcons.chat_bubble_2,
+                        color: Colors.black,
                       ),
                     ),
                   ],
@@ -146,92 +168,24 @@ class Home extends StatelessWidget {
                   // Add your menu functionality here
                 },
               ),
-              ElevatedButton(
-                onPressed: () {
-                  // Add your "For You" button functionality here
-                },
-                style: ElevatedButton.styleFrom(
-                 backgroundColor: Colors.white,
-                  foregroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: const BorderSide(color: Colors.transparent),
-                  ),
-                ),
-                child: const Text(
-                  "For You",
-                  style: TextStyle(
-                    fontSize: 10,
-                    color: Colors.yellow,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+              const CustomButton(child: CustomText(
+                text:"For You",color: Colors.yellow,fontSize: 10,
+              ),
               ),
               const SizedBox(width: 8.0),
-              ElevatedButton(
-                onPressed: () {
-                  // Add your "Trending" button functionality here
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: const BorderSide(color: Colors.transparent),
-                  ),
-                ),
-                child: const Text(
-                  "Trending",
-                  style: TextStyle(
-                    fontSize: 10,
-                    color: Colors.red,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
+              const CustomButton(child: CustomText(
+                text:"Trending",color: Colors.red,fontSize: 10,
+              ),
               ),
               const SizedBox(width: 8.0),
-              ElevatedButton(
-                onPressed: () {
-                  // Add your "Nearby" button functionality here
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: const BorderSide(color: Colors.transparent),
-                  ),
-                ),
-                child: const Text(
-                  "Nearby",
-                  style: TextStyle(
-                    fontSize: 11,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+              const CustomButton(child: CustomText(
+                text:"Nearby",color: Colors.black,fontSize: 10,
+              ),
               ),
               const SizedBox(width: 8.0),
-              ElevatedButton(
-                onPressed: () {
-                  // Add your "New" button functionality here
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: const BorderSide(color: Colors.transparent),
-                  ),
-                ),
-                child: const Text(
-                  "New",
-                  style: TextStyle(
-                    fontSize: 11,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+              const CustomButton(child: CustomText(
+                text:"New",color: Colors.black,fontSize: 10,
+              ),
               ),
             ],
           ),
