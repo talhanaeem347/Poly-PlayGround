@@ -68,41 +68,21 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 20),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white, width: 2),
-                        borderRadius: BorderRadius.circular(80),
-                        color: Colors.yellow,
 
+                    MyIconButton(
+                      color: Colors.yellow,
+                      // isBorder: true,
+
+                      icon: const Icon(
+                        CupertinoIcons.video_camera_solid,
+                        color: Colors.white,
                       ),
-                      child: CupertinoButton(
-                        child: const Icon(
-                          CupertinoIcons.video_camera_solid,
-                          color: Colors.white,
-                        ),
-                        onPressed: () {
-                          // Navigate to the video page
-                        },
-                      ),
+                      onPressed: () {
+                        // Navigate to the video page
+                      },
                     ),
                     const SizedBox(width: 20),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     border: Border.all(color: Colors.white, width: 2),
-                    //     borderRadius: BorderRadius.circular(100),
-                    //     color: Colors.red,
-                    //   ),
-                    //   child: CupertinoButton(
-                    //     child: const Icon(
-                    //       CupertinoIcons.heart_solid,
-                    //       color: Colors.white,
-                    //
-                    //     ),
-                    //     onPressed: () {
-                    //       // Navigate to the like page
-                    //     },
-                    //   ),
-                    // ),
+
                     MyIconButton(
                       color: Colors.red,
                       icon: const Icon(
