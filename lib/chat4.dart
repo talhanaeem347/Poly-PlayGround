@@ -25,7 +25,7 @@ class chat4 extends StatelessWidget {
                  icon: const Icon(Icons.arrow_back,color: Colors.red),
                  onPressed: () {
                   // Navigator.of(context).pop();
-                   Navigator.pushNamed(context, '/chat');
+                   Navigator.pushNamed(context, '/chat3');
                  },
                ),
              ],
