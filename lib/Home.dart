@@ -138,23 +138,23 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: const [
-                     ImageHolder(image: 'assets/1.png',),
-                     ImageHolder(image: 'assets/2.png',),
+                    ImageHolder(image: 'assets/1.png',),
+                    ImageHolder(image: 'assets/2.png',),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 0),
+                padding: const EdgeInsets.symmetric(vertical: 5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: const [
-                     ImageHolder(image: 'assets/3.png',),
-                     ImageHolder(image: 'assets/4.png',),
+                    ImageHolder(image: 'assets/3.png',),
+                    ImageHolder(image: 'assets/4.png',),
                   ],
                 ),
               ),
-              Padding(
+          Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5),
                 child: Stack(
                   children: [
@@ -166,8 +166,7 @@ class Home extends StatelessWidget {
                         ImageHolder(image: 'assets/6.png',),
                       ],
                     ),
-
-                Padding(
+                    Padding(
                   padding: const EdgeInsets.only(top: 90),
                   child: Center(
                     child: SizedBox(
@@ -200,10 +199,9 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 ],
                 ),
-              ),
+               ),
             ]
         ),
       ),
