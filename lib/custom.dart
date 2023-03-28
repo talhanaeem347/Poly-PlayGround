@@ -10,8 +10,8 @@ class InputField extends StatelessWidget {
 
   const InputField({
     super.key,
-    required this.hint,
-    this.icon=const Icon(Icons.person),
+     this.hint="Want to chat ?",
+     this.icon=const Icon(Icons.person),
     this.width = 300,this.isIcon = true,
     this.fontWeight = FontWeight.w500,
   });
@@ -47,33 +47,28 @@ class CustomButton extends StatelessWidget {
   final Color background;
   final Color foreground;
   final String path;
-  // final Function()? onPressed;
+
   const CustomButton({
     super.key,
     required this.child,
     this.fontWeight = FontWeight.w500,
-    //this.width = 120,
-    //this.height = 50,this.color= const Color(0xFFFFFFFF),
-    this.width = 160,
-    this.height = 50,this.color=const  Color(0xFF8A2D25),
+    this.width = 120,
+    this.height = 50,
+    this.color = const Color(0xFFFFFFFF),
     this.background = Colors.white,
     this.foreground = Colors.black,
-    this.path = "",
-    // this.onPressed, // initialize the new parameter
-  });
+    this.path="/home",
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ElevatedButton(
-        onPressed: () {
+        onPressed: () => Navigator.pushNamed(context, path),
 
-          Navigator.pushNamed(context, path);
-        },
         child: child,
         style: ElevatedButton.styleFrom(
           //minimumSize: Size(width, height),
-          backgroundColor:  color,
+          backgroundColor: color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18.0),
             side: const BorderSide(color: Colors.transparent),
@@ -86,7 +81,11 @@ class CustomButton extends StatelessWidget {
 
 class MyGradient extends StatelessWidget {
   final Widget child;
-  const MyGradient({super.key,required this.child,});
+
+  const MyGradient({
+    super.key,
+    required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -106,64 +105,77 @@ class MyGradient extends StatelessWidget {
 class CustomText extends StatelessWidget {
   final String text;
   final Color color;
-  final bool  uppercase;
+  final bool uppercase;
   final int fontSize;
-final  bool  isdecoration;
-  const CustomText({super.key,this.isdecoration=false,this.color=Colors.white,this.uppercase=false,this.text = "Login With Google",this.fontSize=16});
+  final FontWeight fontWeight;
+  final  bool  isdecoration;
+
+  const CustomText({
+    super.key,
+    this.color = Colors.white,
+    this.uppercase = false,
+    this.text = "Login With Google",
+    this.fontSize = 16,
+    this.fontWeight = FontWeight.w500,
+    this.isdecoration=false,
+  });
 
 
   @override
   Widget build(BuildContext context) {
-    return  Text(uppercase? text.toUpperCase():text ,
-
+    return Text(
+      uppercase ? text.toUpperCase() : text,
       style: TextStyle(
-        color:color,
+        color: color,
         fontSize: fontSize.toDouble(),
-        decoration: isdecoration ? TextDecoration.underline: null,
 
+        decoration: isdecoration ? TextDecoration.underline: null,
       ),
     );
   }
 }
+
 class MyIconButton extends StatelessWidget {
-   final Color color;
-   final   Widget icon;
-   final double borderRadius;
-    final bool isBorder;
-    final String path;
+  final Color color;
+  final Widget icon;
+  final double borderRadius;
+  final bool isBorder;
+  final String path;
 
   const MyIconButton({
     super.key,
-    required this.color,
+    this.color = Colors.white,
     this.icon = const Icon(
       CupertinoIcons.heart_solid,
       color: Colors.white,
-    )
-    ,this.borderRadius=100,
-    this.isBorder =false,
+    ),
+    this.borderRadius = 100,
+    this.isBorder = false,
     required this.path,
-
-
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: isBorder ?  Border.all(color: Colors.white, width: 2) : null,
+        border: isBorder ? Border.all(color: Colors.white, width: 2) : null,
         borderRadius: BorderRadius.circular(borderRadius),
+
         color: color,
       ),
       child: CupertinoButton(
 
         child: icon,
-        onPressed: () =>  Navigator.pushNamed(context, path),
+        onPressed: () => Navigator.pushNamed(context, path),
+
       ),
     );
   }
 }
+
 class ImageHolder extends StatelessWidget {
-final String image;
+  final String image;
+
   const ImageHolder({
     super.key,
     required this.image,
@@ -171,9 +183,10 @@ final String image;
 
   @override
   Widget build(BuildContext context) {
-    return  ClipRRect(
+    return ClipRRect(
       borderRadius: BorderRadius.circular(16.0),
-      child:  Image.asset(
+
+      child: Image.asset(
         image,
         height: 190.0, // Change the height of the image here
         width: 159.0,
@@ -182,26 +195,29 @@ final String image;
     );
   }
 }
+
 class Message extends StatelessWidget {
- final Color bgColor;
- final Color color;
+  final Color bgColor;
+  final Color color;
   final String text;
+
   const Message({
     super.key,
-     this.bgColor=Colors.white,
-    this.color=Colors.black,
-     this.text="Hello World",
+    this.bgColor = Colors.white,
+    this.color = Colors.black,
+    this.text = "Hello World",
   });
+
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.circular(10),
       ),
       height: 55,
       width: 270,
-      child:   TextField(
+      child: TextField(
         decoration: InputDecoration(
           hintText: "Hello World",
           hintStyle: TextStyle(
@@ -219,25 +235,28 @@ class Message extends StatelessWidget {
     );
   }
 }
+
 class Typo extends StatelessWidget {
- final String text;
- final Color bgColor;
+  final String text;
+  final Color bgColor;
   final Color color;
   final double fontSize;
+
   const Typo({
     super.key,
-    this.text="Write Something......",
-    this.bgColor=const Color(0xFFF1F1F1),
-    this.color=const Color(0xFF9E9E9E),
-    this.fontSize=16,
+    this.text = "Write Something......",
+    this.bgColor = const Color(0xFFF1F1F1),
+    this.color = const Color(0xFF9E9E9E),
+    this.fontSize = 16,
   });
 
   @override
   Widget build(BuildContext context) {
-    return   Container(
-      decoration:  BoxDecoration(
+    return Container(
+      decoration: BoxDecoration(
         color: bgColor,
-        borderRadius: BorderRadius.horizontal(left: Radius.circular(25), right: Radius.circular(25)),
+        borderRadius: const BorderRadius.horizontal(
+            left: Radius.circular(25), right: Radius.circular(25)),
       ),
       width: 255,
       height: 50,
@@ -256,4 +275,81 @@ class Typo extends StatelessWidget {
     );
   }
 }
+class Customrow extends StatelessWidget {
+ final String text;
 
+  const Customrow({
+    super.key,
+   this.text = "Want to chat ?",
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        const Expanded(
+          child:TextField(
+            decoration: InputDecoration(
+              hintText: 'Want to Chat ?',
+              border: InputBorder.none,
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0),
+          child: SizedBox(
+            width: 41,
+            height: 40,
+            child: Image.asset('assets/oval.png'),
+          ),
+        ),
+        GestureDetector(
+          onTap: () {
+            // Perform action on arrow_forward icon click
+          },
+          child: Container(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: const MyIconButton(
+              path: '/chat',
+              icon : Icon(
+                Icons.arrow_forward_ios,
+                size: 15,
+                color:  Color.fromRGBO(60, 60, 67, 100),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+class CustomContainer extends StatelessWidget {
+final int height;
+final double radius_circular_left;
+final double radius_circular_right;
+  const CustomContainer({
+    super.key,
+   this.height = 47,
+    this.radius_circular_left = 22.5,
+    this.radius_circular_right = 22.5,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 47,
+      decoration:  BoxDecoration(
+        borderRadius: BorderRadius.horizontal(
+            left: Radius.circular(radius_circular_left),
+            right: Radius.circular(radius_circular_right),
+        ),
+        color: Colors.white,
+      ),
+      child: const Padding(padding: EdgeInsets.symmetric(horizontal: 10),
+        child: Customrow(
+          text: 'Want to Chat ?',
+        ),
+      ),
+    );
+  }
+}

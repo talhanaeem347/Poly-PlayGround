@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:poly_playground/custom.dart';
-
 class chat3 extends StatelessWidget {
   const chat3({Key? key});
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(
+        leading: const MyIconButton(
+          color: Colors.white,
+          path: "/chat_notification",
+           isBorder: false,
+          icon:  Icon(
             Icons.arrow_back,
             color: Colors.red,
           ),
-          onPressed: () {
-            Navigator.pushNamed(context, '/chat_notification');
-          },
         ),
       ),
        body: Column(
@@ -52,28 +49,14 @@ class chat3 extends StatelessWidget {
            Row(
              mainAxisAlignment: MainAxisAlignment.center,
              children:   const [
-               Text(
-                 'Jenny Wilson',
-                 style: TextStyle(
-                   fontSize: 22,
-                   fontWeight: FontWeight.w500,color:Colors.black,
-                 ),
-               ),
-
+               CustomText(text: 'Jenny Wilson', fontSize: 22, fontWeight: FontWeight.w500,color: Colors.black,),
              ],
            ),
            const SizedBox(height: 20,),
            Row(
              mainAxisAlignment: MainAxisAlignment.center,
              children:   const [
-               Text(
-                 ' 03:35 minutes',
-                 style: TextStyle(
-                   fontSize: 16,
-                   fontWeight: FontWeight.w400,color:Color.fromRGBO(60, 60, 67, 100),
-                 ),
-               ),
-
+               CustomText(text: ' 03:35 minutes', color: Color.fromRGBO(60, 60, 67, 100), fontSize: 16, fontWeight: FontWeight.w400,),
              ],
            ),
            const SizedBox(height: 140,),
@@ -81,74 +64,13 @@ class chat3 extends StatelessWidget {
              padding: const EdgeInsets.symmetric(horizontal: 20),
              child: Row(
                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-               children: [
-                 Container(
-                   decoration: const BoxDecoration(
-                     shape: BoxShape.circle,
-                     color: Colors.red,
-                   ),
-                   width: 90,
-                   height: 70,
-                   child: IconButton(
-                     onPressed: () {},
-                     icon: const Icon(
-                       Icons.call_end,
-                       color: Colors.white,
-                     ),
-                     iconSize: 30,
-                     padding: const EdgeInsets.all(15),
-                     splashRadius: 20,
-                     color: Colors.grey[300],
-                     tooltip: 'Cancel Call',
-                   ),
-                 ),
-
-                 Container(
-                   decoration: const BoxDecoration(
-                     shape: BoxShape.circle,
-                     color: Colors.yellow,
-                   ),
-                   width: 90,
-                   height: 70,
-                   child: IconButton(
-                     onPressed: () {
-                       Navigator.pushNamed(context, '/video_call');
-                     },
-                     icon: const Icon(
-                       Icons.video_call,
-                       color: Colors.white,
-                     ),
-                     iconSize: 30,
-                     padding: const EdgeInsets.all(15),
-                     splashRadius: 20,
-                     color: Colors.grey[300],
-                     tooltip: 'Cancel Video Call',
-                   ),
-                 ),
-                 Container(
-                   decoration: const BoxDecoration(
-                     shape: BoxShape.circle,
-                     color: Colors.blue,
-                   ),
-                   width: 90,
-                   height: 70,
-                   child: IconButton(
-                     onPressed: () {},
-                     icon: const Icon(
-                       Icons.volume_up,
-                       color: Colors.white,
-                     ),
-                     iconSize: 30,
-                     padding: const EdgeInsets.all(15),
-                     splashRadius: 20,
-                     color: Colors.grey[300],
-                     tooltip: 'Loudspeaker On/Off',
-                   ),
-                 ),
+               children:const [
+                  MyIconButton(path: "/home", icon: Icon(Icons.call_end,color: Colors.white,size: 35), color: Colors.red, ),
+                  MyIconButton(path: "/video_call", icon: Icon(Icons.video_call,color: Colors.white,size: 35), color: Colors.yellow, ),
+                  MyIconButton(path: "/home", icon: Icon(Icons.volume_up,color: Colors.white,size: 35), color: Colors.blue, ),
                ],
              ),
            )
-
          ],
        ),
     );
