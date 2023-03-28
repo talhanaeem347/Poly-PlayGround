@@ -27,10 +27,11 @@ class Settings extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.arrow_back_ios,color: Color.fromRGBO(255, 255, 255, 70), size: 20.0, ),
-                    onPressed: () {
-                      // Add code to handle back button press
-                    },
+                    icon: Icon(Icons.arrow_back_ios, size: 20),
+                    onPressed: ()=>Navigator.pop(context),
+
+                    padding: EdgeInsets.symmetric(horizontal: 2),
+                    color: Colors.white,
                   ),
                   const Text(
                     'Settings',

@@ -5,11 +5,14 @@ class InputField extends StatelessWidget {
   final String hint;
   final Icon icon;
   final FontWeight fontWeight;
+  final double width;
+  final bool isIcon;
 
   const InputField({
     super.key,
     required this.hint,
-    required this.icon,
+    this.icon=const Icon(Icons.person),
+    this.width = 300,this.isIcon = true,
     this.fontWeight = FontWeight.w500,
   });
 
@@ -20,11 +23,12 @@ class InputField extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(20)),
         color: Colors.white,
       ),
+      width: width,
       child: TextField(
         decoration: InputDecoration(
           labelStyle: TextStyle(color: Colors.black, fontWeight: fontWeight),
           labelText: hint,
-          prefixIcon: icon,
+          prefixIcon:isIcon ? icon: null,
           prefixIconColor: Colors.black,
           border: InputBorder.none,
           contentPadding: const EdgeInsets.all(7),
@@ -42,22 +46,30 @@ class CustomButton extends StatelessWidget {
   final FontWeight fontWeight;
   final Color background;
   final Color foreground;
-
+  final String path;
+  // final Function()? onPressed;
   const CustomButton({
     super.key,
     required this.child,
     this.fontWeight = FontWeight.w500,
-    this.width = 120,
-    this.height = 50,this.color= const Color(0xFFFFFFFF),
+    //this.width = 120,
+    //this.height = 50,this.color= const Color(0xFFFFFFFF),
+    this.width = 160,
+    this.height = 50,this.color=const  Color(0xFF8A2D25),
     this.background = Colors.white,
     this.foreground = Colors.black,
+    this.path = "",
+    // this.onPressed, // initialize the new parameter
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+
+          Navigator.pushNamed(context, path);
+        },
         child: child,
         style: ElevatedButton.styleFrom(
           //minimumSize: Size(width, height),
@@ -96,7 +108,9 @@ class CustomText extends StatelessWidget {
   final Color color;
   final bool  uppercase;
   final int fontSize;
-  const CustomText({super.key,this.color=Colors.white,this.uppercase=false,this.text = "Login With Google",this.fontSize=16,});
+final  bool  isdecoration;
+  const CustomText({super.key,this.isdecoration=false,this.color=Colors.white,this.uppercase=false,this.text = "Login With Google",this.fontSize=16});
+
 
   @override
   Widget build(BuildContext context) {
@@ -105,6 +119,7 @@ class CustomText extends StatelessWidget {
       style: TextStyle(
         color:color,
         fontSize: fontSize.toDouble(),
+        decoration: isdecoration ? TextDecoration.underline: null,
 
       ),
     );
@@ -140,12 +155,7 @@ class MyIconButton extends StatelessWidget {
         color: color,
       ),
       child: CupertinoButton(
-        // child: const Icon(
-        //   // CupertinoIcons.heart_solid,
-        //
-        //   color: Colors.white,
-        //
-        // ),
+
         child: icon,
         onPressed: () =>  Navigator.pushNamed(context, path),
       ),
@@ -246,9 +256,4 @@ class Typo extends StatelessWidget {
     );
   }
 }
-// class CallingButton extends StatelessWidget {;
-//
-//   const CallingButton({
-//     super.key,
-//
 
