@@ -46,7 +46,7 @@ class chats extends StatelessWidget {
                     ),
                     MyIconButton(
                       color: Colors.white,
-                      path: "/Home",
+                      path: "/home",
                       // isBorder: true,
                       icon:  Icon(
                         CupertinoIcons.home,
@@ -56,14 +56,14 @@ class chats extends StatelessWidget {
                     MyIconButton(
                       color: Colors.yellow,
                       // isBorder: true,
-                      path: "/chat3",
+                      path: "/calling",
                       icon:  Icon(
                         CupertinoIcons.video_camera_solid,
                         color: Colors.white,
                       ),
                     ),
                     MyIconButton(
-                      path: "/chats",
+                      path: "/chat_notification",
                       color: Colors.red,
                       icon:  Icon(
                         CupertinoIcons.heart_solid,
@@ -72,7 +72,7 @@ class chats extends StatelessWidget {
                       ),
                     ),
                     MyIconButton(
-                      path: "/chat2",
+                      path: "/chat",
                       color: Colors.white,
                       borderRadius: 20,
                       icon:  Icon(

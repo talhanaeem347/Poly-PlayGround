@@ -1,11 +1,11 @@
 import 'Home.dart';
-import 'package:poly_playground/chats.dart';
+import 'package:poly_playground/chat_notification.dart';
 import 'Settings.dart';
-import 'chats.dart';
+import 'chat_notification.dart';
 import 'Notifications.dart';
-import 'chat2.dart';
-import 'chat3.dart';
-import 'chat4.dart';
+import 'chat.dart';
+import 'calling.dart';
+import 'video_call.dart';
 import 'Settings.dart';
 import 'package:flutter/material.dart';
 
@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return    MaterialApp(
-      initialRoute: '/chat2',
+      initialRoute: '/home',
         routes: {
-          '/chats': (context) => const chats(),
-          '/chat2': (context) => const chat2(),
-          '/chat3': (context)=> const chat3(),
-          '/chat4':(context)=>const chat4(),
+          '/chat_notification': (context) => const chats(),
+          '/chat': (context) => const chat2(),
+          '/calling': (context)=> const chat3(),
+          '/video_call':(context)=>const chat4(),
           '/settings':(context)=>const Settings(),
           '/home':(context)=>const Home(),
           '/Notifications':(context)=>const Notifications(),

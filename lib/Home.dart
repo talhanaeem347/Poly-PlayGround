@@ -58,7 +58,7 @@ class Home extends StatelessWidget {
                     MyIconButton(
                       color: Colors.yellow,
                       // isBorder: true,
-                      path: "/chat3",
+                      path: "/calling",
 
                       icon:  Icon(
                         CupertinoIcons.video_camera_solid,
@@ -67,7 +67,7 @@ class Home extends StatelessWidget {
 
                     ),
                     MyIconButton(
-                      path: "/chats",
+                      path: "/chat_notification",
                       color: Colors.red,
                       icon:  Icon(
                         CupertinoIcons.heart_solid,
@@ -77,7 +77,7 @@ class Home extends StatelessWidget {
 
                     ),
                     MyIconButton(
-                      path: "/chat2",
+                      path: "/chat",
                       color: Colors.white,
 
                       borderRadius: 20,
@@ -175,7 +175,7 @@ class Home extends StatelessWidget {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/chat3');// Add your onPressed function here
+                          Navigator.pushNamed(context, '/calling');// Add your onPressed function here
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.yellow,

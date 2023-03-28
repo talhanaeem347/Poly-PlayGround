@@ -1,4 +1,4 @@
-import 'package:poly_playground/chats.dart';
+import 'package:poly_playground/chat_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:poly_playground/custom.dart';
 class chat2 extends StatelessWidget {
@@ -15,7 +15,7 @@ class chat2 extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.pushNamed(context, '/chats');
+              Navigator.pushNamed(context, '/chat_notification');
             },
           ),
           title: Column(
