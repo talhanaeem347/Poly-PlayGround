@@ -33,16 +33,23 @@ class Home extends StatelessWidget {
                 elevation: 0,
                 centerTitle: true,
                 title: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    MyIconButton(
-                      color: Colors.white,
-                      path: "/profile",
-                      // isBorder: true,
-                      icon:  Icon(
-                        CupertinoIcons.person,
-                        color: Colors.black,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+
+                        borderRadius: BorderRadius.circular(20),
                       ),
+                      child: CupertinoButton(
+                        child: const Icon(
+                          CupertinoIcons.person,
+                          color: Colors.black,
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/Photo_profile');
+
+                          // Navigate to the profile page
+                        },
 
                     ),
                     MyIconButton(
@@ -107,6 +114,7 @@ class Home extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.menu),
                 onPressed: () {
+                  Navigator.pushNamed(context, '/settings');
                   // Add your menu functionality here
                 },
               ),
