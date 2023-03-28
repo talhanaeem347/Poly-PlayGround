@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:poly_playground/custom.dart';
 
 class chat3 extends StatelessWidget {
   const chat3({Key? key});
@@ -16,7 +17,7 @@ class chat3 extends StatelessWidget {
             color: Colors.red,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/chats');
           },
         ),
       ),
@@ -101,6 +102,7 @@ class chat3 extends StatelessWidget {
                      tooltip: 'Cancel Call',
                    ),
                  ),
+
                  Container(
                    decoration: const BoxDecoration(
                      shape: BoxShape.circle,

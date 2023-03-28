@@ -16,7 +16,7 @@ import 'Notifications.dart';
 import 'chat2.dart';
 import 'chat3.dart';
 import 'chat4.dart';
-// import 'Settings.dart';
+import 'Settings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -41,8 +41,6 @@ class MyApp extends StatelessWidget {
           '/Email-Verification' : (context) => const    EmailVerifiaction (),
           '/Photo_profile' : (context) => const    PhotoProfile(),
 
-
-
           '/': (context) => Splash(),
           '/profile': (context) => chat2(),
           '/chats': (context)=> chats(),
@@ -54,7 +52,6 @@ class MyApp extends StatelessWidget {
         },
 
       debugShowCheckedModeBanner: false,
-      //home: chats()
     );
   }
 }

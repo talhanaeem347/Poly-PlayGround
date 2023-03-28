@@ -52,6 +52,8 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.child,
     this.fontWeight = FontWeight.w500,
+    //this.width = 120,
+    //this.height = 50,this.color= const Color(0xFFFFFFFF),
     this.width = 160,
     this.height = 50,this.color=const  Color(0xFF8A2D25),
     this.background = Colors.white,
@@ -109,6 +111,7 @@ class CustomText extends StatelessWidget {
 final  bool  isdecoration;
   const CustomText({super.key,this.isdecoration=false,this.color=Colors.white,this.uppercase=false,this.text = "Login With Google",this.fontSize=16});
 
+
   @override
   Widget build(BuildContext context) {
     return  Text(uppercase? text.toUpperCase():text ,
@@ -125,9 +128,9 @@ final  bool  isdecoration;
 class MyIconButton extends StatelessWidget {
    final Color color;
    final   Widget icon;
-   final  Function onPressed ;
    final double borderRadius;
     final bool isBorder;
+    final String path;
 
   const MyIconButton({
     super.key,
@@ -136,9 +139,9 @@ class MyIconButton extends StatelessWidget {
       CupertinoIcons.heart_solid,
       color: Colors.white,
     )
-    ,required this.onPressed
     ,this.borderRadius=100,
-    this.isBorder =false
+    this.isBorder =false,
+    required this.path,
 
 
   });
@@ -154,7 +157,101 @@ class MyIconButton extends StatelessWidget {
       child: CupertinoButton(
 
         child: icon,
-        onPressed: () => onPressed,
+        onPressed: () =>  Navigator.pushNamed(context, path),
+      ),
+    );
+  }
+}
+class ImageHolder extends StatelessWidget {
+final String image;
+  const ImageHolder({
+    super.key,
+    required this.image,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return  ClipRRect(
+      borderRadius: BorderRadius.circular(16.0),
+      child:  Image.asset(
+        image,
+        height: 190.0, // Change the height of the image here
+        width: 159.0,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+}
+class Message extends StatelessWidget {
+ final Color bgColor;
+ final Color color;
+  final String text;
+  const Message({
+    super.key,
+     this.bgColor=Colors.white,
+    this.color=Colors.black,
+     this.text="Hello World",
+  });
+  @override
+  Widget build(BuildContext context) {
+    return  Container(
+      decoration: BoxDecoration(
+        color: bgColor,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      height: 55,
+      width: 270,
+      child:   TextField(
+        decoration: InputDecoration(
+          hintText: "Hello World",
+          hintStyle: TextStyle(
+            color: color,
+            fontSize: 16,
+          ),
+          border: InputBorder.none,
+          contentPadding: EdgeInsets.only(left: 10, right: 10),
+        ),
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 16,
+        ),
+      ),
+    );
+  }
+}
+class Typo extends StatelessWidget {
+ final String text;
+ final Color bgColor;
+  final Color color;
+  final double fontSize;
+  const Typo({
+    super.key,
+    this.text="Write Something......",
+    this.bgColor=const Color(0xFFF1F1F1),
+    this.color=const Color(0xFF9E9E9E),
+    this.fontSize=16,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return   Container(
+      decoration:  BoxDecoration(
+        color: bgColor,
+        borderRadius: BorderRadius.horizontal(left: Radius.circular(25), right: Radius.circular(25)),
+      ),
+      width: 255,
+      height: 50,
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: TextField(
+        decoration: InputDecoration(
+          hintText: 'write something.......',
+          hintStyle: TextStyle(
+            color: color,
+            fontSize: 16,
+          ),
+          border: InputBorder.none,
+          contentPadding: const EdgeInsets.symmetric(vertical: 10),
+        ),
       ),
     );
   }

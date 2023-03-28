@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'custom.dart';
 
 class Settings extends StatelessWidget {
   const Settings({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +48,7 @@ class Settings extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: 41.0,
                         height: 40.0,
                         child: Image.asset('assets/oval.png'),
@@ -64,13 +64,13 @@ class Settings extends StatelessWidget {
                             padding: const EdgeInsets.all(6.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
+                              children: const [
+                                Text(
                                   'John Doe',
                                   style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                                 ),
-                                const SizedBox(height: 8.0),
-                                const Text(
+                                SizedBox(height: 8.0),
+                                Text(
                                   'john.doe@example.com',
                                   style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.w700,decoration: TextDecoration.underline),
                                 ),
@@ -196,15 +196,6 @@ class Settings extends StatelessWidget {
                   onPressed: () {
                     // Button pressed code here
                   },
-                  child: const Text(
-                    'Log out',
-                    style: TextStyle(
-                      fontFamily: 'Times New Roman',
-                      fontSize: 17,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white,
-                    ),
-                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF8A2D25),
                     foregroundColor: Colors.white,
@@ -213,6 +204,15 @@ class Settings extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     minimumSize: const Size(135, 52),
+                  ),
+                  child: const Text(
+                    'Log out',
+                    style: TextStyle(
+                      fontFamily: 'Times New Roman',
+                      fontSize: 17,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white,
+                    ),
                   ),
               ),
                ),
