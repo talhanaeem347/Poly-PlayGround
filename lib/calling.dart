@@ -17,7 +17,7 @@ class chat3 extends StatelessWidget {
             color: Colors.red,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, '/chats');
+            Navigator.pushNamed(context, '/chat_notification');
           },
         ),
       ),
@@ -112,7 +112,7 @@ class chat3 extends StatelessWidget {
                    height: 70,
                    child: IconButton(
                      onPressed: () {
-                       Navigator.pushNamed(context, '/chat4');
+                       Navigator.pushNamed(context, '/video_call');
                      },
                      icon: const Icon(
                        Icons.video_call,

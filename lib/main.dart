@@ -9,13 +9,13 @@ import 'package:poly_playground/ui/auth/loginsignup/signupwithphone.dart';
 import 'package:poly_playground/ui/splash.dart';
 
 import 'Home.dart';
-import 'package:poly_playground/chats.dart';
+import 'package:poly_playground/chat_notification.dart';
 import 'Settings.dart';
-import 'chats.dart';
+import 'chat_notification.dart';
 import 'Notifications.dart';
-import 'chat2.dart';
-import 'chat3.dart';
-import 'chat4.dart';
+import 'chat.dart';
+import 'calling.dart';
+import 'video_call.dart';
 import 'Settings.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return    MaterialApp(
-
       initialRoute: '/',
         routes: {
           '/login' : (context) =>  LogIn(),
