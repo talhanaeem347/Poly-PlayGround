@@ -52,6 +52,7 @@ class Home extends StatelessWidget {
                         },
 
                     ),
+                    ),
                     MyIconButton(
                       color: Colors.white,
                       path: "/Home",
