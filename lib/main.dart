@@ -1,5 +1,11 @@
+import 'package:poly_playground/ui/ProfileSetup/photo.dart';
+import 'package:poly_playground/ui/ProfileSetup/photoprofile.dart';
+import 'package:poly_playground/ui/auth/loginsignup/Signup.dart';
+import 'package:poly_playground/ui/auth/loginsignup/emailverifiaction.dart';
 import 'package:poly_playground/ui/auth/loginsignup/login.dart';
 import 'package:poly_playground/ui/auth/loginsignup/loginwithphone.dart';
+import 'package:poly_playground/ui/auth/loginsignup/phoneverfication.dart';
+import 'package:poly_playground/ui/auth/loginsignup/signupwithphone.dart';
 import 'package:poly_playground/ui/splash.dart';
 
 import 'Home.dart';
@@ -29,6 +35,12 @@ class MyApp extends StatelessWidget {
         routes: {
           '/login' : (context) =>  LogIn(),
           '/login_with_phone' : (context) =>  const LoginWithPhone(),
+          '/Signup' : (context) =>  const   Signup(),
+          '/Phone_Verification' : (context) =>  const   PhoneVerifiaction(),
+          '/Signup-with-phone' : (context) => const    SignupWithPhone(),
+          '/Email-Verification' : (context) => const    EmailVerifiaction (),
+          '/Photo_profile' : (context) => const    PhotoProfile(),
+
 
 
           '/': (context) => Splash(),
@@ -36,7 +48,7 @@ class MyApp extends StatelessWidget {
           '/chats': (context)=> chats(),
           '/chat4':(context)=>chat4(),
           '/settings':(context)=>const Settings(),
-          '/Home':(context)=>const Home(),
+          '/home':(context)=>const Home(),
           '/Notifications':(context)=>const Notifications(),
 
         },

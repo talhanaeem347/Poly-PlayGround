@@ -47,7 +47,7 @@ class CustomButton extends StatelessWidget {
   final Color background;
   final Color foreground;
   final String path;
-
+  // final Function()? onPressed;
   const CustomButton({
     super.key,
     required this.child,
@@ -57,6 +57,7 @@ class CustomButton extends StatelessWidget {
     this.background = Colors.white,
     this.foreground = Colors.black,
     this.path = "",
+    // this.onPressed, // initialize the new parameter
   });
 
   @override
@@ -64,6 +65,7 @@ class CustomButton extends StatelessWidget {
     return Container(
       child: ElevatedButton(
         onPressed: () {
+
           Navigator.pushNamed(context, path);
         },
         child: child,
@@ -104,7 +106,8 @@ class CustomText extends StatelessWidget {
   final Color color;
   final bool  uppercase;
   final int fontSize;
-  const CustomText({super.key,this.color=Colors.white,this.uppercase=false,this.text = "Login With Google",this.fontSize=16});
+final  bool  isdecoration;
+  const CustomText({super.key,this.isdecoration=false,this.color=Colors.white,this.uppercase=false,this.text = "Login With Google",this.fontSize=16});
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +116,7 @@ class CustomText extends StatelessWidget {
       style: TextStyle(
         color:color,
         fontSize: fontSize.toDouble(),
+        decoration: isdecoration ? TextDecoration.underline: null,
 
       ),
     );

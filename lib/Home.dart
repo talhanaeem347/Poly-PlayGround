@@ -46,6 +46,8 @@ class Home extends StatelessWidget {
                           color: Colors.black,
                         ),
                         onPressed: () {
+                          Navigator.pushNamed(context, '/Photo_profile');
+
                           // Navigate to the profile page
                         },
                       ),
@@ -145,6 +147,7 @@ class Home extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.menu),
                 onPressed: () {
+                  Navigator.pushNamed(context, '/settings');
                   // Add your menu functionality here
                 },
               ),
