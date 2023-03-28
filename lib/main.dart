@@ -1,3 +1,7 @@
+import 'package:poly_playground/ui/auth/loginsignup/login.dart';
+import 'package:poly_playground/ui/auth/loginsignup/loginwithphone.dart';
+import 'package:poly_playground/ui/splash.dart';
+
 import 'Home.dart';
 import 'package:poly_playground/chats.dart';
 import 'Settings.dart';
@@ -20,12 +24,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return    MaterialApp(
-      initialRoute: '/chat2',
+
+      initialRoute: '/',
         routes: {
-          '/chats': (context) => const chats(),
-          '/chat2': (context) => const chat2(),
-          '/chat3': (context)=> const chat3(),
-          '/chat4':(context)=>const chat4(),
+          '/login' : (context) =>  LogIn(),
+          '/login_with_phone' : (context) =>  const LoginWithPhone(),
+          '/': (context) => Splash(),
+          '/profile': (context) => chat2(),
+          '/chats': (context)=> chats(),
+          '/chat4':(context)=>chat4(),
           '/settings':(context)=>const Settings(),
           '/home':(context)=>const Home(),
           '/Notifications':(context)=>const Notifications(),
