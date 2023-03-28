@@ -79,17 +79,17 @@ class chat4 extends StatelessWidget {
           ],
           ),
         ),
-         Padding(
-           padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 50),
-           child: Row(
-             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-             children: const [
-               MyIconButton(path: "/home", icon: Icon(Icons.call_end,color: Colors.white,size: 35), color: Colors.red, ),
-               MyIconButton(path: "/video_call", icon: Icon(Icons.video_call,color: Colors.white,size: 35), color: Colors.yellow, ),
-               MyIconButton(path: "/home", icon: Icon(Icons.volume_up,color: Colors.white,size: 35), color: Colors.blue, ),
-             ],
-           ),
-         )
+         // Padding(
+         //   padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 50),
+         //   child: Row(
+         //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+         //     children:  [
+         //       MyIconButton(path: "/home", icon: Icon(Icons.call_end,color: Colors.white,size: 35), color: Colors.red, ),
+         //       MyIconButton(path: "/video_call", icon: Icon(Icons.video_call,color: Colors.white,size: 35), color: Colors.yellow, ),
+         //       MyIconButton(path: "/home", icon: Icon(Icons.volume_up,color: Colors.white,size: 35), color: Colors.blue, ),
+         //     ],
+         //   ),
+         // )
        ],
         )
       ),

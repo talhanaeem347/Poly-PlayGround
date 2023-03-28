@@ -48,16 +48,24 @@ class CustomButton extends StatelessWidget {
   final Color foreground;
   final String path;
 
-  const CustomButton({
-    super.key,
-    required this.child,
-    this.fontWeight = FontWeight.w500,
-    this.width = 120,
-    this.height = 50,
-    this.color = const Color(0xFFFFFFFF),
-    this.background = Colors.white,
-    this.foreground = Colors.black,
-    this.path="/home",
+  const CustomButton(
+
+  {
+
+  super
+
+      .
+
+  key,
+  required this.child,
+  this.fontWeight = FontWeight.w500,
+  this.width = 120,
+  this.height = 50,
+  this.color = const Color(0xFFFFFFFF),
+  this.background = Colors.white,
+  this.foreground = Colors.black,
+  this.path="/home",
+});
 
   @override
   Widget build(BuildContext context) {

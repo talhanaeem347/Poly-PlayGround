@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
                 elevation: 0,
                 centerTitle: true,
                 title: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       decoration: BoxDecoration(
