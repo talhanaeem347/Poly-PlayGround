@@ -106,21 +106,9 @@ class SignupWithPhone extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 30),
-                Padding(
-                  padding:const EdgeInsets.symmetric(horizontal: 120),
-                  child: Row(
-                    children: const [
-
-                      CustomButton(
-                        path: '/Phone_Verification',
-                        child: Text('Login'),
-
-                        ),
-
-                      SizedBox(height: 10),
-                    ],
-                  ),
-                ),
+                CustomButton(
+                  path: '/Phone_Verification',
+                  child: const Text('CONTINUE'),color: Color(0xFF8A2D25),),
                 const Spacer(),
               ],
             ),

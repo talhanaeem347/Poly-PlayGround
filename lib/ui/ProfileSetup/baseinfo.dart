@@ -13,19 +13,16 @@ class BaseInfo extends StatelessWidget {
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Padding(
-                  padding:EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back_ios, size: 20),
-                        onPressed: () {
-                          // Add functionality here
-                        },
-                        color: Colors.white,
-                      ),
-                    ],
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children:[
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back_ios, size: 18),
+                      onPressed: ()=>Navigator.pop(context),
+                      padding: const EdgeInsets.symmetric(horizontal: 2),
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 45),
                 Padding(
@@ -65,7 +62,9 @@ class BaseInfo extends StatelessWidget {
                   ]
                 ),
                 const SizedBox(height: 120),
-                CustomButton(child: const Text('CONTINUE')),
+                CustomButton(
+                  path: '/Base_info2',
+                    child: const Text('CONTINUE'),color: Color(0xFF8A2D25),),
               ],
             ),
 

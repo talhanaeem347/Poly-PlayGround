@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:poly_playground/custom.dart';
-class chat3 extends StatelessWidget {
-  const chat3({Key? key});
+class calling extends StatelessWidget {
+  const calling({Key? key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +10,7 @@ class chat3 extends StatelessWidget {
         elevation: 0,
         leading: const MyIconButton(
           color: Colors.white,
-          path: "/chat_notification",
+          path: "/home",
            isBorder: false,
           icon:  Icon(
             Icons.arrow_back,

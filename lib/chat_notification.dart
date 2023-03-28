@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'custom.dart';
 
-class chats extends StatelessWidget {
-  const chats({Key? key});
+class chat_notifications extends StatelessWidget {
+  const chat_notifications({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class chats extends StatelessWidget {
                   children: const [
                     MyIconButton(
                       color: Colors.white,
-                      path: "/profile",
+                      path: "/Photo_profile",
                       // isBorder: true,
                       icon:  Icon(
                         CupertinoIcons.person,

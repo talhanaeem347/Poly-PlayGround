@@ -55,6 +55,7 @@ class PhoneVerifiaction extends StatelessWidget {
                 const SizedBox(height: 20),
                 const CustomButton(
                   path: '/home',
+                  color: Color(0xFF8A2D25),
                   child: Text('Vadidate'),
                 ),
                 const Spacer(),

@@ -48,6 +48,7 @@ class CustomButton extends StatelessWidget {
   final Color foreground;
   final String path;
 
+
   const CustomButton({
     super.key,
     required this.child,
@@ -57,7 +58,8 @@ class CustomButton extends StatelessWidget {
     this.color = const Color(0xFFFFFFFF),
     this.background = Colors.white,
     this.foreground = Colors.black,
-    this.path="/home",
+    this.path="/",
+  });
 
   @override
   Widget build(BuildContext context) {

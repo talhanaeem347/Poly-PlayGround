@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
                 elevation: 0,
                 centerTitle: true,
                 title: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       decoration: BoxDecoration(
@@ -55,7 +55,7 @@ class Home extends StatelessWidget {
                     ),
                     MyIconButton(
                       color: Colors.white,
-                      path: "/Home",
+                      path: "/",
                       // isBorder: true,
                       icon:  Icon(
                         CupertinoIcons.home,
@@ -75,7 +75,7 @@ class Home extends StatelessWidget {
 
                     ),
                     MyIconButton(
-                      path: "/chat_notification",
+                      path: "/",
                       color: Colors.red,
                       icon:  Icon(
                         CupertinoIcons.heart_solid,
@@ -85,7 +85,7 @@ class Home extends StatelessWidget {
 
                     ),
                     MyIconButton(
-                      path: "/chat",
+                      path: "/chat_notifications",
                       color: Colors.white,
 
                       borderRadius: 20,

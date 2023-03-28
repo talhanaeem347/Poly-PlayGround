@@ -34,7 +34,7 @@ class LoginSignup extends StatelessWidget {
                   children: [
                     const CustomButton(
 
-                      path: '/home',
+                      path: '/home',color: Color(0xFF8A2D25),
 
                       child: Text("Login"),
                     ),

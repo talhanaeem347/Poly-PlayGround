@@ -18,13 +18,11 @@ class BaseInfo2 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children:[
                 IconButton(
-                icon: const Icon(Icons.arrow_back_ios, size: 18),
-                onPressed: () {
-                  // Add functionality here
-                },
-                padding: const EdgeInsets.symmetric(horizontal: 2),
-                color: Colors.white,
-              ),
+                  icon: const Icon(Icons.arrow_back_ios, size: 18),
+                  onPressed: ()=>Navigator.pop(context),
+                  padding: const EdgeInsets.symmetric(horizontal: 2),
+                  color: Colors.white,
+                ),
               ],
             ),
             CustomText(text: 'Role:',color: Colors.black),
@@ -220,29 +218,9 @@ class BaseInfo2 extends StatelessWidget {
             ),
 
             const SizedBox(height: 90),
-            Padding(
-              padding:const EdgeInsets.symmetric(horizontal: 110),
-              child: Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    // ignore: sort_child_properties_last
-                    child: const Padding(
-                        padding:EdgeInsets.symmetric(horizontal: 35,vertical:15)  ,
-                        child: Text('Create')),
-                    style: ElevatedButton.styleFrom(
-                      primary: const Color(0xFF8A2D25),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(height: 10),
-
-                ],
-              ),
-            ),
+            const CustomButton(
+              path: '/Photo',
+              child: const Text('Create'),color: Color(0xFF8A2D25),  ),
           ],
         ),
 

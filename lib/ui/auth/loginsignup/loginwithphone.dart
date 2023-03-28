@@ -37,6 +37,7 @@ class LoginWithPhone extends StatelessWidget {
                 const SizedBox(height: 30),
                const  CustomButton(
                   path: '/Phone_Verification',
+                  color: Color(0xFF8A2D25),
                   child: Text("Continue"),
 
                 ),

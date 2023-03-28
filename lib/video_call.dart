@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'Custom.dart';
+import 'custom.dart';
 
-class chat4 extends StatelessWidget {
-  const chat4({Key? key});
+class video_call extends StatelessWidget {
+  const video_call({Key? key});
 
   @override
   Widget build(BuildContext context) {

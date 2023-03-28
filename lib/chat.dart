@@ -1,8 +1,8 @@
 import 'package:poly_playground/chat_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:poly_playground/custom.dart';
-class chat2 extends StatelessWidget {
-  const chat2({Key? key});
+class chat extends StatelessWidget {
+  const chat({Key? key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +15,7 @@ class chat2 extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.pushNamed(context, '/chat_notification');
+              Navigator.pushNamed(context, '/chat_notifications');
             },
           ),
           title: Column(

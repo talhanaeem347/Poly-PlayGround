@@ -58,7 +58,9 @@ class EmailVerifiaction extends StatelessWidget {
                 const SizedBox(height: 15),
                 CustomButton(
                   path: '/home',
-                  child: const Text('VALIDATE'),),
+                  child: const Text('VALIDATE'),
+                  color: const Color(0xFF8A2D25),
+                ),
                 const Spacer(),
               ],
             ),
