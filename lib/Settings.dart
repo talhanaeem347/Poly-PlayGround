@@ -29,7 +29,7 @@ class Settings extends StatelessWidget {
                   IconButton(
                     icon: const Icon(Icons.arrow_back_ios,color: Color.fromRGBO(255, 255, 255, 70), size: 20.0, ),
                     onPressed: () {
-                      // Add code to handle back button press
+                      Navigator.pushNamed(context, '/home');// Add code to handle back button press
                     },
                   ),
                   const Text(

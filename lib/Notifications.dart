@@ -90,7 +90,7 @@ class Notifications extends StatelessWidget {
                 padding:const EdgeInsets.symmetric(horizontal: 130),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/');// Button pressed code here
+                    Navigator.pushNamed(context, '/home');// Button pressed code here
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF8A2D25),

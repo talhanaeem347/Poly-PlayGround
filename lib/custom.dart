@@ -42,6 +42,7 @@ class CustomButton extends StatelessWidget {
   final FontWeight fontWeight;
   final Color background;
   final Color foreground;
+  final String path;
 
   const CustomButton({
     super.key,
@@ -52,13 +53,14 @@ class CustomButton extends StatelessWidget {
     this.color = const Color(0xFFFFFFFF),
     this.background = Colors.white,
     this.foreground = Colors.black,
+    this.path="/home",
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () => Navigator.pushNamed(context, path),
         child: child,
         style: ElevatedButton.styleFrom(
           //minimumSize: Size(width, height),

@@ -107,7 +107,7 @@ class Home extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.menu),
                 onPressed: () {
-                  // Add your menu functionality here
+                  Navigator.pushNamed(context, '/settings');// Add your menu functionality here
                 },
               ),
               const CustomButton(child: CustomText(
@@ -125,7 +125,8 @@ class Home extends StatelessWidget {
               ),
               ),
               const SizedBox(width: 8.0),
-              const CustomButton(child: CustomText(
+              const CustomButton(path: "/Notifications",
+                child: CustomText(
                 text:"New",color: Colors.black,fontSize: 10,
               ),
               ),
