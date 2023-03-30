@@ -8,17 +8,8 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            Color(0xFF8A2D25),
-            Colors.white,
-          ],
-        ),
-      ),
+    return MyGradient(
+
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
@@ -33,7 +24,7 @@ class Home extends StatelessWidget {
                 elevation: 0,
                 centerTitle: true,
                 title: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       decoration: BoxDecoration(
@@ -47,15 +38,14 @@ class Home extends StatelessWidget {
                         ),
                         onPressed: () {
                           Navigator.pushNamed(context, '/Photo_profile');
-
                           // Navigate to the profile page
                         },
 
                     ),
                     ),
-                    MyIconButton(
+                  const   MyIconButton(
                       color: Colors.white,
-                      path: "/Home",
+                      path: "/",
                       // isBorder: true,
                       icon:  Icon(
                         CupertinoIcons.home,
@@ -63,7 +53,7 @@ class Home extends StatelessWidget {
                       ),
 
                     ),
-                    MyIconButton(
+                  const  MyIconButton(
                       color: Colors.yellow,
                       // isBorder: true,
                       path: "/calling",
@@ -74,8 +64,8 @@ class Home extends StatelessWidget {
                       ),
 
                     ),
-                    MyIconButton(
-                      path: "/chat_notification",
+                 const   MyIconButton(
+                      path: "/",
                       color: Colors.red,
                       icon:  Icon(
                         CupertinoIcons.heart_solid,
@@ -84,8 +74,8 @@ class Home extends StatelessWidget {
                       ),
 
                     ),
-                    MyIconButton(
-                      path: "/chat",
+                  const MyIconButton(
+                      path: "/chat_notifications",
                       color: Colors.white,
 
                       borderRadius: 20,
@@ -100,119 +90,125 @@ class Home extends StatelessWidget {
             ),
           ),
         ),
-        body: Column(
-            children: [
-          Container(
-          color: Colors.white,
-          child: Row(
-            children: [
-              IconButton(
-                icon: const Icon(Icons.search_outlined),
-                onPressed: () {
-                  // Add your search functionality here
-                },
+        body: SingleChildScrollView(
+          child: Column(
+              children: [
+
+            Container(
+            color: Colors.white,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.search_outlined),
+                    onPressed: () {
+                      // Add your search functionality here
+                    },
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.menu),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/settings');
+                      // Add your menu functionality here
+                    },
+                  ),
+                  const CustomButton(child: CustomText(
+                    text:"For You",color: Colors.yellow,fontSize: 10,
+                  ),
+                  ),
+                  const SizedBox(width: 8.0),
+                  const CustomButton(child: CustomText(
+                    text:"Trending",color: Colors.red,fontSize: 10,
+                  ),
+                  ),
+                  const SizedBox(width: 8.0),
+                  const CustomButton(child: CustomText(
+                    text:"Nearby",color: Colors.black,fontSize: 10,
+                  ),
+                  ),
+                  const SizedBox(width: 8.0),
+                  const CustomButton(path: "/Notifications",
+                    child: CustomText(
+                    text:"New",color: Colors.black,fontSize: 10,
+                  ),
+                  ),
+                ],
               ),
-              IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/settings');
-                  // Add your menu functionality here
-                },
-              ),
-              const CustomButton(child: CustomText(
-                text:"For You",color: Colors.yellow,fontSize: 10,
-              ),
-              ),
-              const SizedBox(width: 8.0),
-              const CustomButton(child: CustomText(
-                text:"Trending",color: Colors.red,fontSize: 10,
-              ),
-              ),
-              const SizedBox(width: 8.0),
-              const CustomButton(child: CustomText(
-                text:"Nearby",color: Colors.black,fontSize: 10,
-              ),
-              ),
-              const SizedBox(width: 8.0),
-              const CustomButton(path: "/Notifications",
-                child: CustomText(
-                text:"New",color: Colors.black,fontSize: 10,
-              ),
-              ),
-            ],
+            ),
           ),
-        ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
-                    ImageHolder(image: 'assets/1.png',),
-                    ImageHolder(image: 'assets/2.png',),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      ImageHolder(image: 'assets/1.png',),
+                      ImageHolder(image: 'assets/2.png',),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
-                    ImageHolder(image: 'assets/3.png',),
-                    ImageHolder(image: 'assets/4.png',),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      ImageHolder(image: 'assets/3.png',),
+                      ImageHolder(image: 'assets/4.png',),
+                    ],
+                  ),
                 ),
-              ),
-          Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5),
-                child: Stack(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const [
-                        ImageHolder(image: 'assets/5.png',),
-                        ImageHolder(image: 'assets/6.png',),
-                      ],
-                    ),
-                    Padding(
-                  padding: const EdgeInsets.only(top: 90),
-                  child: Center(
-                    child: SizedBox(
-                      width: 160,
-                      height: 50,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/calling');// Add your onPressed function here
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.yellow,
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(25),
-                              topRight: Radius.circular(25),
-                              bottomLeft: Radius.circular(25),
-                              bottomRight: Radius.circular(25),
+            Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  child: Stack(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          ImageHolder(image: 'assets/5.png',),
+                          ImageHolder(image: 'assets/6.png',),
+                        ],
+                      ),
+                      Padding(
+                    padding: const EdgeInsets.only(top: 50),
+                    child: Center(
+                      child: SizedBox(
+                        width: 160,
+                        height: 50,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/calling');// Add your onPressed function here
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.yellow,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(25),
+                                topRight: Radius.circular(25),
+                                bottomLeft: Radius.circular(25),
+                                bottomRight: Radius.circular(25),
+                              ),
                             ),
                           ),
-                        ),
-                        child: const Text(
-                          'Go Live',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
+                          child: const Text(
+                            'Go Live',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                ],
-                ),
-               ),
-            ]
+                  ],
+                  ),
+                 ),
+              ]
+          ),
         ),
       ),
     );

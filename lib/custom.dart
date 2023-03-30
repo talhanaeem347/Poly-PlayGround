@@ -47,16 +47,9 @@ class CustomButton extends StatelessWidget {
   final Color background;
   final Color foreground;
   final String path;
-
   const CustomButton(
-
   {
-
-  super
-
-      .
-
-  key,
+  super.key,
   required this.child,
   this.fontWeight = FontWeight.w500,
   this.width = 120,
@@ -66,7 +59,6 @@ class CustomButton extends StatelessWidget {
   this.foreground = Colors.black,
   this.path="/home",
 });
-
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -106,8 +106,10 @@ class PhotoProfile extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 180),
-                CustomButton(child: const Text('Continue'),),
+                const SizedBox(height: 100),
+               const CustomButton(
+                  path: '/Base_info',
+                  child: const Text('Continue'),color: Color(0xFF8A2D25),),
 
                 const Spacer(),
               ],

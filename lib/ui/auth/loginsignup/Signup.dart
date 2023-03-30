@@ -69,6 +69,7 @@ class Signup extends StatelessWidget {
                 const SizedBox(height: 20),
                 const CustomButton(
                   path: '/Email-Verification',
+                  color: Color(0xFF8A2D25),
                   child: Text('Create'),),
                 const Spacer(),
               ],

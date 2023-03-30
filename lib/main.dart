@@ -1,3 +1,5 @@
+import 'package:poly_playground/ui/ProfileSetup/baseinfo.dart';
+import 'package:poly_playground/ui/ProfileSetup/baseinfo2.dart';
 import 'package:poly_playground/ui/ProfileSetup/photo.dart';
 import 'package:poly_playground/ui/ProfileSetup/photoprofile.dart';
 import 'package:poly_playground/ui/auth/loginsignup/Signup.dart';
@@ -39,11 +41,15 @@ class MyApp extends StatelessWidget {
           '/Signup-with-phone' : (context) => const    SignupWithPhone(),
           '/Email-Verification' : (context) => const    EmailVerifiaction (),
           '/Photo_profile' : (context) => const    PhotoProfile(),
+          '/Base_info' : (context) => const    BaseInfo(),
+          '/Base_info2' : (context) => const    BaseInfo2(),
+          '/Photo' : (context) => const    Photo(),
 
           '/': (context) => Splash(),
-          '/profile': (context) => chat2(),
-          '/chats': (context)=> chats(),
-          '/chat4':(context)=>chat4(),
+          '/chat_notifications' :(context) => chat_notifications(),
+          '/chat': (context)=> chat(),
+          '/video_call':(context)=>video_call(),
+          '/calling':(context)=>calling(),
           '/settings':(context)=>const Settings(),
           '/home':(context)=>const Home(),
           '/Notifications':(context)=>const Notifications(),
