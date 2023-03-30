@@ -38,7 +38,6 @@ class Home extends StatelessWidget {
                         ),
                         onPressed: () {
                           Navigator.pushNamed(context, '/Photo_profile');
-
                           // Navigate to the profile page
                         },
 
