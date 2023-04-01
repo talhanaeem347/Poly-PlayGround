@@ -1,24 +1,24 @@
-import 'package:poly_playground/ui/ProfileSetup/baseinfo.dart';
-import 'package:poly_playground/ui/ProfileSetup/baseinfo2.dart';
-import 'package:poly_playground/ui/ProfileSetup/photo.dart';
-import 'package:poly_playground/ui/ProfileSetup/photoprofile.dart';
-import 'package:poly_playground/ui/auth/loginsignup/Signup.dart';
-import 'package:poly_playground/ui/auth/loginsignup/emailverifiaction.dart';
-import 'package:poly_playground/ui/auth/loginsignup/login.dart';
-import 'package:poly_playground/ui/auth/loginsignup/loginwithphone.dart';
-import 'package:poly_playground/ui/auth/loginsignup/phoneverfication.dart';
-import 'package:poly_playground/ui/auth/loginsignup/signupwithphone.dart';
-import 'package:poly_playground/ui/splash.dart';
+import 'package:poly_playgroundd/ui/ProfileSetup/baseinfo.dart';
+import 'package:poly_playgroundd/ui/ProfileSetup/baseinfo2.dart';
+import 'package:poly_playgroundd/ui/ProfileSetup/photo.dart';
+import 'package:poly_playgroundd/ui/ProfileSetup/photoprofile.dart';
+import 'package:poly_playgroundd/ui/auth/loginsignup/Signup.dart';
+import 'package:poly_playgroundd/ui/auth/loginsignup/emailverifiaction.dart';
+import 'package:poly_playgroundd/ui/auth/loginsignup/login.dart';
+import 'package:poly_playgroundd/ui/auth/loginsignup/loginwithphone.dart';
+import 'package:poly_playgroundd/ui/auth/loginsignup/phoneverfication.dart';
+import 'package:poly_playgroundd/ui/auth/loginsignup/signupwithphone.dart';
+import 'package:poly_playgroundd/ui/splash.dart';
 
 import 'Home.dart';
-import 'package:poly_playground/chat_notification.dart';
+import 'package:poly_playgroundd/chat_notification.dart';
 import 'Settings.dart';
-import 'chat_notification.dart';
+
 import 'Notifications.dart';
 import 'chat.dart';
 import 'calling.dart';
 import 'video_call.dart';
-import 'Settings.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,6 +32,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return    MaterialApp(
+      title: "polyplayground",
+
       initialRoute: '/',
         routes: {
           '/login' : (context) =>  LogIn(),

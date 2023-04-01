@@ -1,6 +1,6 @@
-import 'package:poly_playground/chat_notification.dart';
+import 'package:poly_playgroundd/chat_notification.dart';
 import 'package:flutter/material.dart';
-import 'package:poly_playground/custom.dart';
+import 'package:poly_playgroundd/custom.dart';
 class chat extends StatelessWidget {
   const chat({Key? key});
   @override
